@@ -25,6 +25,15 @@ class CommentDAO extends DAO
     }
 
     /**
+     * Removes all comments for an article
+     *
+     * @param $articleId The id of the article
+     */
+    public function deleteAllByArticle($articleId) {
+        $this->getDb()->delete('t_comment', array('art_id' => $articleId));
+    }
+
+    /**
      * Return a list of all comments for an article, sorted by date (most recent last).
      *
      * @param integer $articleId The article id.
@@ -102,6 +111,24 @@ class CommentDAO extends DAO
             $comment->setId($id);
         }
 
+    }
+
+    /**
+     * Returns a list of all comments, sorted by date (most recent first).
+     *
+     * @return array A list of all comments.
+     */
+    public function findAll() {
+        $sql = "select * from t_comment order by com_id desc";
+        $result = $this->getDb()->fetchAll($sql);
+
+        // Convert query result to an array of domain objects
+        $entities = array();
+        foreach ($result as $row) {
+            $id = $row['com_id'];
+            $entities[$id] = $this->buildDomainObject($row);
+        }
+        return $entities;
     }
 
 }
