@@ -10,3 +10,5 @@ $app['db.options'] = array(
     'user'     => 'microcms_user',
     'password' => 'secret',
 );
+
+$app['monolog.level'] = 'WARNING';

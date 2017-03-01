@@ -50,6 +50,7 @@ class ComposerStaticInitb88fc66496e8f0c1fe8ceee8bf6ee389
             'Symfony\\Component\\BrowserKit\\' => 29,
             'Symfony\\Component\\Asset\\' => 24,
             'Symfony\\Bridge\\Twig\\' => 20,
+            'Symfony\\Bridge\\Monolog\\' => 23,
             'Silex\\' => 6,
         ),
         'P' => 
@@ -58,6 +59,7 @@ class ComposerStaticInitb88fc66496e8f0c1fe8ceee8bf6ee389
         ),
         'M' => 
         array (
+            'Monolog\\' => 8,
             'MicroCMS\\' => 9,
         ),
         'D' => 
@@ -180,6 +182,10 @@ class ComposerStaticInitb88fc66496e8f0c1fe8ceee8bf6ee389
         array (
             0 => __DIR__ . '/..' . '/symfony/twig-bridge',
         ),
+        'Symfony\\Bridge\\Monolog\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/monolog-bridge',
+        ),
         'Silex\\' => 
         array (
             0 => __DIR__ . '/..' . '/silex/silex/src/Silex',
@@ -187,6 +193,10 @@ class ComposerStaticInitb88fc66496e8f0c1fe8ceee8bf6ee389
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+        ),
+        'Monolog\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
         'MicroCMS\\' => 
         array (
